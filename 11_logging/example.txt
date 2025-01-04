@@ -5,3 +5,4 @@ Traceback (most recent call last):
     div = a/b
           ~^~
 ZeroDivisionError: division by zero
+2025-01-04 23:58:32,056 - ipykernel.comm - ERROR - No such comm target registered: jupyter.widget.control
