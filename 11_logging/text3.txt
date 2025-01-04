@@ -1,0 +1,5 @@
+2025-01-04 23:40:40,553 - somu - DEBUG - this is dubug message
+2025-01-04 23:40:40,555 - somu - INFO - This is an info message
+2025-01-04 23:40:40,555 - somu - WARNING - This is a warning message
+2025-01-04 23:40:40,555 - somu - ERROR - This is an error message
+2025-01-04 23:40:40,557 - somu - CRITICAL - This is a critical message
