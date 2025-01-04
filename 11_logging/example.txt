@@ -1,0 +1,7 @@
+2025-01-04 23:56:39,164 - root - ERROR - error has happend
+2025-01-04 23:56:39,165 - root - ERROR -  exception occureddivision by zero
+Traceback (most recent call last):
+  File "C:\Users\acer\AppData\Local\Temp\ipykernel_23800\1631059953.py", line 8, in dive
+    div = a/b
+          ~^~
+ZeroDivisionError: division by zero

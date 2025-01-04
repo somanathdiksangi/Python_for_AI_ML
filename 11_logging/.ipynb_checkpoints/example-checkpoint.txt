@@ -1,0 +1,3 @@
+2025-01-04 23:55:37,111 - root - INFO - this is a stsrt of my code and i am try to enter 5 ans 10
+2025-01-04 23:55:37,111 - root - WARNING - this is a stsrt of my code and i am try to enter 5 ans 10
+2025-01-04 23:55:37,112 - root - INFO - executed succ
