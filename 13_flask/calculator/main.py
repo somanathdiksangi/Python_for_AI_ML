@@ -1,28 +1,34 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 
 app = Flask(__name__)
 
 @app.route("/")  
 def home_page():
-    return "this is my home page"
+    return render_template('index.html')
 
 @app.route("/somu", methods=["POST"])  # Ensure "POST" is in uppercase
 def math_number():
     if request.method == "POST":  
-        operation = request.json["operation"]
-        first_num = request.json["first_num"]
-        second_num = request.json["second_num"]
-        if operation=="add":
-            result=first_num+second_num
+        operation = request.form["operation"]
+        first_num = float(request.form["first_num"])  # Convert string to float
+        second_num = float(request.form["second_num"])  # Convert string to float
+        
+        # Perform operations
+        if operation == "add":
+            result = first_num + second_num
         elif operation == "sub":
-            result=first_num-second_num
+            result = first_num - second_num
         elif operation == "mul":
-            result=first_num*second_num
+            result = first_num * second_num
         elif operation == "div":
-              result=first_num/second_num
+            if second_num != 0:  # Avoid division by zero
+                result = first_num / second_num
+            else:
+                result = "Error: Division by zero"
         else:
-            print("give me correct option")
-    return jsonify(result=result)  
+            result = "Invalid operation"
+    
+    return render_template('result.html', result=result)
 
 if __name__ == "__main__":
     app.run(debug=True)
